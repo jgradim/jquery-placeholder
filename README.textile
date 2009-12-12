@@ -1,0 +1,27 @@
+h2. jQuery Placeholder
+
+h3. DESCRIPTION
+
+A very basic, very small placeholder jQuery plugin. It's only 622 bytes when minified and you can always remove the license text, making it 355 bytes long, but you really shouldn't do that :)
+
+This plugin is useful when you want a text field to display a value that hints at what the user is supposed to type. Text disapears when text field is focused and restored if the text field is left blank.
+
+h3. USAGE
+
+<pre><code>    $("input").placeholder();
+</pre></code>
+
+h3. OPTIONS
+
+|*Option*|*Description*|*Default Value*|
+|text|text to serve as placeholder|'enter text'|
+|cls|class given to element while placeholder text is active|'placeholder'|
+
+---
+
+h3. CHANGELOG
+
+
+h4. v1.0 Dec 12, 2009
+
+First version of the plugin
