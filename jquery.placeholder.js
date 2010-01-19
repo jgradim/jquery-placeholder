@@ -1,5 +1,5 @@
 /*
- * placeholder 1.0 - jQuery plugin add a placeholder text to a text field
+ * jquery-placeholder 1.1 - minimalistic jQuery plugin to add a placeholder text to a text field
  * 
  * http://github.com/jgradim/jquery-placeholder/
  *
@@ -31,12 +31,19 @@
 			
 			// apply class and text to placeholder elements
 			obj.blur();
+			
+			obj.parents('form:first').submit(function() {
+				if(o.clearOnSubmit && obj.val() == o.text) {
+					obj.val('');
+				}
+			});
 		});
 	};
 	
 	// default options
 	$.fn.placeholder.defaults = {
 		text: "enter text",
-		cls: 'placeholder'
+		cls: 'placeholder',
+		clearOnSubmit: true
 	};
 })(jQuery);
